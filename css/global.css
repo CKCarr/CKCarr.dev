@@ -1,0 +1,102 @@
+/*
+------------------------------------------------------------------------------------------------------------------
+*/
+
+@font-face {
+    font-family: 'Outfit-reg';
+    src: url('../static/Outfit-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit-bold';
+    src: url('../static/Outfit-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*
+------------------------------------------------------------------------------------------------------------------
+*/
+
+:root {
+    /* fonts */
+    --font-outfit-reg: Outfit-reg;
+    --font-outfit-bold: Outfit-bold;
+    --font-roboto: Roboto;
+
+    /* font sizes */
+    --h1-size: 96px;
+    --font-size-5xl: 24px;
+    --font-size-13xl: 32px;
+    --font-size-xl: 20px;
+
+    /* Colors */
+    --color-midnightblue: #06053e;
+    --color-white: #ffffff;
+    --color-cornflowerblue: #8080d7;
+    --color-peachpuff: #ffc2b0;
+    --color-paleturquoise: #82f8f8;
+    --color-pink: #e19ee5;
+    --color-plum: #c499f3;
+    --color-darkcyan: #009b9b;
+    --color-purple: #7500ac;
+    --color-darkpurple: #2d0042;
+    --color-brightpink: #f700ff;
+}
+
+/*
+------------------------------------------------------------------------------------------------------------------
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+
+}
+
+/* Hide vertical scrollbar while making it transparent works on google not mozilla*/
+body::-webkit-scrollbar {
+    width: 12px;
+    /* Adjust the width as needed */
+    background-color: transparent;
+}
+
+/* Hide horizontal scrollbar while making it transparent works in google not mozilla*/
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+body {
+        font-family: 'Roboto', 'Outfit' 'Helvetica', 'Arial', sans-serif;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-midnightblue);
+}
+
+
+/* JS Countdown */
+#countdown {
+    border: 8px dotted var(--color-purple);
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    font-family: var(--font-outfit-bold);
+    text-align: center;
+    font-size: 24px;
+}
+
+
+
+/*ANIMATION DISPLAYS*/
+
+.intro {
+    overflow: hidden;
+}
+

@@ -1,0 +1,399 @@
+h1 {
+    font-family: var(--font-outfit-reg);
+}
+
+p {
+
+    font-family: var(--font-roboto);
+    letter-spacing: 1px;
+}
+
+a {
+    font-family: var(--font-outfit-bold);
+    letter-spacing: 1px;
+
+}
+
+h2,
+h3 {
+    border-bottom: 4px solid var(--color-brightpink);
+    border-top: 4px solid var(--color-brightpink);
+}
+
+header,
+footer {
+    background: linear-gradient(90deg,
+            var(--color-cornflowerblue) 0%,
+            /* var(--color-peachpuff) 25%,  */
+            var(--color-paleturquoise) 50%,
+            /* var(--color-pink) 75%,  */
+            var(--color-plum) 100%);
+    border-bottom: 4px solid var(--color-brightpink);
+}
+
+.colors {
+    background-image: linear-gradient(90deg,
+            var(--color-cornflowerblue) 0%,
+            var(--color-paleturquoise) 50%,
+            var(--color-plum) 100%);
+    background-clip: text;
+    /* This property applies the gradient to the text */
+    -webkit-background-clip: text;
+    /* For webkit browsers (Safari) */
+    color: transparent;
+    /* Make the text transparent */
+    font-family: var(--font-outfit-bold);
+    letter-spacing: 2px;
+}
+
+/* NAVIGATION */
+
+.logo-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--color-darkpurple);
+    border: 4px solid var(--color-darkcyan);
+    margin: 0 auto;
+    display: block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-purple);
+    font-size: 32px;
+    font-weight: bold;
+
+}
+
+.home-link,
+.about-link,
+.project-link,
+.resume-link,
+.contact-link,
+.credits-link {
+    /* border: 5px solid blue; */
+    border: 5px solid var(--color-darkcyan);
+    text-decoration: none;
+    color: var(--color-purple);
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+
+}
+
+.nav-links ul {
+    list-style: none;
+
+}
+
+.nav-links ul li a,
+footer,
+footer a {
+    text-decoration: none;
+    color: var(--color-purple);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+footer a,
+.footer-icons,
+footer address {
+    padding-top: 10px;
+    margin-right: 20px;
+}
+
+.footer-icons i{
+    font-size: 2rem;
+}
+
+.nav-links ul li a:hover,
+footer i:hover {
+    color: var(--color-brightpink);
+}
+
+/*HERO */
+.hero-img{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-image:linear-gradient(90deg,
+            var(--color-cornflowerblue) 0%,
+            var(--color-paleturquoise) 50%,
+            var(--color-plum) 100%);
+    border: 10px solid transparent;
+    margin: 0 auto;
+    display: block;
+}
+
+/* ABOUT ME CARDS*/
+.card hr {
+    border: 4px solid var(--color-darkcyan);
+}
+.about-me,
+.about-me .card-bg{
+    border: 6px solid var(--color-white);
+}
+
+.about-me .card-img-top {
+    margin: 22px auto;
+    width: 245px;
+    height: 245px;
+}
+
+.about-me .card .card-img-top {
+    background-image: linear-gradient(90deg,
+                var(--color-cornflowerblue) 0%,
+                var(--color-paleturquoise) 50%,
+                var(--color-plum) 100%);
+        border: 6px solid transparent;
+}
+
+.about-me,
+.about-me .card {
+    background-color: var(--color-cornflowerblue);
+    color: var(--color-white);
+    font-family: var(--font-outfit);
+}
+
+.about-me article,
+.about-me .card-body {
+    border: 6px solid var(--color-darkcyan);
+    border-bottom: var(--color-white);
+    background-color: var(--color-white);
+}
+
+.about-me article ,
+.about-me .card-body h2 {
+    font-family: var(--font-outfit-bold);
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-darkpurple);
+
+}
+
+.about-me article p,
+.about-me .card-body p {
+    font-family: var(--font-roboto);
+    text-align: left;
+    line-height: 1.2;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-darkpurple);
+}
+
+/* TECH && TOOLS*/
+/* Icons */
+
+.skill-icons {
+    background-color: var(--color-cornflowerblue);
+    border: 4px solid var(--color-darkcyan);
+    border-radius: 5%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box {
+    background-color: var(--color-white);
+    align-content: center;
+    border-radius: 25%;
+    margin: 25px auto;
+    padding: 10px;
+}
+
+.icon-box img {
+    width: 50px;
+    height: 50px;
+    margin: 1px auto;
+    display: block;
+}
+
+/* PROJECTS SECTION */
+.h1-colors {
+
+    font-family: var(--font-outfit-bold);
+}
+
+.color-b {
+    color: var(--color-paleturquoise);
+}
+
+.color-p {
+    color: var(--color-plum);
+}
+
+.project-container {
+    background-color: var(--color-midnightblue);
+    border-radius: 10px;
+}
+.prj-img{
+    background-color: var(--color-white) !important;
+    border: 6px solid var(--color-darkcyan);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+
+
+/*FORM CSS*/
+#contact-form-section {
+    background-color: var(--color-cornflowerblue);
+    padding: 20px;
+    margin: 20px;
+    margin: 0 auto;
+    display: block;
+    color: var(--color-white);
+    font-family: var(--font-outfit-bold);
+    font-size: 1.2rem;
+}
+
+#contact-form-section form {
+    background-color: var(--color-paleturquoise);
+    padding: 20px;
+    margin: 20px;
+    margin: 0 auto;
+    display: block;
+    font-family: var(--font-outfit-bold);
+    font-size: 1.2rem;
+}
+
+form label {
+    font-family: var(--font-outfit-bold);
+    font-size: large;
+    color: var(--color-brightpink);
+    padding-left: .5rem;
+}
+
+::placeholder {
+    color: var(--color-plum);
+    font-size: medium;
+    font-family: var(--font-outfit-reg);
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    background: var(--color-darkpurple);
+    width: 100%;
+    padding: 12px;
+    border: 4px solid var(--color-darkcyan);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+#contact-form-section textarea { 
+    height: 200px;
+    width: 400;
+}
+
+input[type=submit] {
+    background-color: var(--color-darkpurple);
+    color: var(--color-plum);
+    padding: 12px 20px;
+    border: 4px solid var(--color-darkcyan);
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-outfit-bold);
+    font-size: 1.2rem;
+    width: 60%;
+}
+
+input[type=submit]:hover {
+        border: 4px solid var(--color-brightpink);
+    background-color: var(--color-darkpurple);
+    color: var(--color-brightpink);
+}
+.btn {
+    width: 45%;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-outfit-bold);
+    font-size: 1.2rem;
+}
+
+.github-btn ,
+.linkedin-btn {
+    width: 80%;
+    text-decoration: none;
+}
+
+.hero-btns button,
+.github-btn a,
+.linkedin-btn a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: var(--font-outfit-bold);
+    font-size: 1.2rem;
+}
+
+.github-btn a:hover,
+.linkedin-btn a:hover {
+    color: var(--color-white);
+    text-decoration: none;
+
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 212px) {
+    main {
+        margin-top: 225px;
+    }
+    /* header .nav-links,
+    header #countdown {
+        display: none;
+    }
+
+    .nav-links.show-links,
+    header #countdown {
+        display: block;
+    } */
+
+}
+
+@media (min-width: 324px) {
+    main {
+        margin-top: 350px;
+    }
+    .h1-colors {
+        font-size: 55px;
+
+    }
+}
+
+@media (min-width: 575px) {
+    main {
+        margin-top: 160px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    main {
+
+        margin-top: 150px;
+    }
+    .h1-colors {
+        font-size: 75px;
+
+    }
+
+}
+
+@media (min-width: 992px) {
+    main {
+        margin-top: 150px;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        margin-top: 180px;
+    }
+}
