@@ -56,17 +56,7 @@
 
 }
 
-/* Hide vertical scrollbar while making it transparent works on google not mozilla*/
-body::-webkit-scrollbar {
-    width: 12px;
-    /* Adjust the width as needed */
-    background-color: transparent;
-}
 
-/* Hide horizontal scrollbar while making it transparent works in google not mozilla*/
-body::-webkit-scrollbar-thumb {
-    background-color: transparent;
-}
 
 body {
         font-family: 'Roboto', 'Outfit' 'Helvetica', 'Arial', sans-serif;

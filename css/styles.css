@@ -11,25 +11,38 @@ p {
 a {
     font-family: var(--font-outfit-bold);
     letter-spacing: 1px;
-
 }
 
 h2,
 h3 {
-    border-bottom: 4px solid var(--color-brightpink);
-    border-top: 4px solid var(--color-brightpink);
+    border-bottom: 4px solid var(--color-plum);
+    border-top: 4px solid var(--color-plum);
 }
+
+/* header,
+footer {
+    background: linear-gradient(90deg,
+            var(--color-cornflowerblue,) 0%,
+            var(--color-paleturquoise) 50%,
+            var(--color-plum) 100%);
+    border-bottom: 4px solid var(--color-plum);
+} */
+
 
 header,
 footer {
     background: linear-gradient(90deg,
-            var(--color-cornflowerblue) 0%,
+            rgba(100, 149, 237, 0.8) 0%,
+            /* Use rgba() with the desired opacity value */
             /* var(--color-peachpuff) 25%,  */
-            var(--color-paleturquoise) 50%,
+            rgba(175, 238, 238, 0.8) 50%,
+            /* Use rgba() with the desired opacity value */
             /* var(--color-pink) 75%,  */
-            var(--color-plum) 100%);
-    border-bottom: 4px solid var(--color-brightpink);
+            rgba(221, 160, 221, 0.8) 100%);
+    /* Use rgba() with the desired opacity value */
+    border-bottom: 4px solid var(--color-plum);
 }
+
 
 .colors {
     background-image: linear-gradient(90deg,
@@ -73,7 +86,7 @@ footer {
 .contact-link,
 .credits-link {
     /* border: 5px solid blue; */
-    border: 5px solid var(--color-darkcyan);
+    border: 4px solid var(--color-darkcyan);
     text-decoration: none;
     color: var(--color-purple);
     text-align: center;
@@ -110,7 +123,7 @@ footer address {
 
 .nav-links ul li a:hover,
 footer i:hover {
-    color: var(--color-brightpink);
+    color: var(--color-paleturquoise);
 }
 
 /*HERO */
@@ -131,7 +144,7 @@ footer i:hover {
 .card hr {
     border: 4px solid var(--color-darkcyan);
 }
-.about-me,
+/* .about-me, */
 .about-me .card-bg{
     border: 6px solid var(--color-white);
 }
@@ -150,7 +163,7 @@ footer i:hover {
         border: 6px solid transparent;
 }
 
-.about-me,
+/* .about-me, */
 .about-me .card {
     background-color: var(--color-cornflowerblue);
     color: var(--color-white);
@@ -169,7 +182,7 @@ footer i:hover {
     font-family: var(--font-outfit-bold);
     text-align: center;
     margin-bottom: 20px;
-    color: var(--color-darkpurple);
+    color: var(--color-purple);
 
 }
 
@@ -180,7 +193,7 @@ footer i:hover {
     line-height: 1.2;
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--color-darkpurple);
+    color: var(--color-darkcyan);
 }
 
 /* TECH && TOOLS*/
@@ -189,7 +202,7 @@ footer i:hover {
 .skill-icons {
     background-color: var(--color-cornflowerblue);
     border: 4px solid var(--color-darkcyan);
-    border-radius: 5%;
+    border-radius: 6%;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -206,7 +219,7 @@ footer i:hover {
 .icon-box img {
     width: 50px;
     height: 50px;
-    margin: 1px auto;
+    margin: 2px auto;
     display: block;
 }
 
@@ -262,7 +275,7 @@ footer i:hover {
 form label {
     font-family: var(--font-outfit-bold);
     font-size: large;
-    color: var(--color-brightpink);
+    color: var(--color-purple);
     padding-left: .5rem;
 }
 
@@ -291,6 +304,7 @@ textarea {
     width: 400;
 }
 
+/* FORM BUTTON STYLES*/
 input[type=submit] {
     background-color: var(--color-darkpurple);
     color: var(--color-plum);
@@ -304,10 +318,12 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-        border: 4px solid var(--color-brightpink);
+        border: 4px solid var(--color-plum);
     background-color: var(--color-darkpurple);
-    color: var(--color-brightpink);
+    color: var(--color-plum);
 }
+
+/* BUTTON STYLES*/
 .btn {
     width: 45%;
     padding: 12px 20px;
@@ -345,7 +361,7 @@ input[type=submit]:hover {
     main {
         margin-top: 225px;
     }
-    /* header .nav-links,
+    header .nav-links,
     header #countdown {
         display: none;
     }
@@ -353,7 +369,7 @@ input[type=submit]:hover {
     .nav-links.show-links,
     header #countdown {
         display: block;
-    } */
+    }
 
 }
 
@@ -384,6 +400,15 @@ input[type=submit]:hover {
 
     }
 
+    header .nav-links,
+    .header #countdown {
+        display: none;
+    }
+        
+
+    .header #countdown {
+        display: block;
+    } 
 }
 
 @media (min-width: 992px) {
