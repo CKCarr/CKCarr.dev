@@ -72,14 +72,6 @@ footer {
     top: 0;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--color-purple);
-    font-size: 32px;
-    font-weight: bold;
-
-}
-
 .home-link,
 .about-link,
 .project-link,
@@ -93,13 +85,10 @@ footer {
     width: 125px;
     height: 40px;
     border-radius: 10px;
-
-
 }
 
 .nav-links ul {
     list-style: none;
-
 }
 
 .nav-links ul li a,
@@ -197,8 +186,19 @@ footer i:hover {
     color: var(--color-darkcyan);
 }
 
+/* Design & Research */
+
+.img1,
+.img2 {
+    width: 50px;
+}
+
 /* TECH && TOOLS*/
 /* Icons */
+
+#tech-tools {
+    width:75%;
+}
 
 .skill-icons {
     background-color: var(--color-cornflowerblue);
@@ -226,8 +226,9 @@ footer i:hover {
 
 /* PROJECTS SECTION */
 .h1-colors {
-
     font-family: var(--font-outfit-bold);
+    font-size: var(--h1-size)
+
 }
 
 .color-b {
@@ -332,6 +333,7 @@ input[type=submit]:hover {
     cursor: pointer;
     font-family: var(--font-outfit-bold);
     font-size: 1.2rem;
+
 }
 
 .github-btn ,
@@ -340,20 +342,20 @@ input[type=submit]:hover {
     text-decoration: none;
 }
 
-.hero-btns button,
+.hero-btns a,
 .github-btn a,
 .linkedin-btn a {
     text-decoration: none;
     color: var(--color-white);
     font-family: var(--font-outfit-bold);
-    font-size: 1.2rem;
+    font-size: 1.8rem;
 }
 
+.hero-btns a:hover,
 .github-btn a:hover,
 .linkedin-btn a:hover {
     color: var(--color-white);
     text-decoration: none;
-
 }
 
 /* MEDIA QUERIES */
@@ -363,29 +365,36 @@ input[type=submit]:hover {
         margin-top: 225px;
     }
 
+    #tech-tools {
+        width: 75%;
+    }
+
 }
 
 @media only screen and (max-width: 324px) {
     main {
         margin-top: 350px;
     }
-    .h1-colors {
-        font-size: 55px;
 
-    }
     #countdown {
         width: 25%;
-}
+    }
 
+    #tech-tools {
+        width: 75%;
+    }
 }
 
 @media only screen and(max-width: 575px) {
     main {
         margin-top: 160px;
     }
-#countdown {
-    width: 25%;
-}
+    #countdown {
+        width: 25%;
+    }
+    #tech-tools {
+        width: 75%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -393,15 +402,14 @@ input[type=submit]:hover {
 
         margin-top: 150px;
     }
-    .h1-colors {
-        font-size: 64px;
-    }
 
     #countdown {
         width: 25%;
     }
-        
 
+    #tech-tools {
+        width: 50%;
+    }
 
 }
 
@@ -409,9 +417,14 @@ input[type=submit]:hover {
     main {
         margin-top: 150px;
     }
-        #countdown {
-            width: 50%;
-        }
+
+    #countdown {
+        width: 50%;
+    }
+
+    #tech-tools {
+        width: 75%;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -420,6 +433,10 @@ input[type=submit]:hover {
     }
 
     #countdown {
+        width: 50%;
+    }
+
+    #tech-tools {
         width: 50%;
     }
 }
