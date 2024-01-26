@@ -1,111 +1,91 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Code Crafting">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="CKCarr">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="CKCarr.dev">
+<meta charset="UTF-8">
+<meta name="description" content="Code Crafting">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="CKCarr">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="CKCarr.dev">
 
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <title>CKCarr.dev</title>
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<title>CKCarr.dev</title>
 
-    <!--Font Awesome Icons-->
-    <script src="https://kit.fontawesome.com/6c6d5d6d3e.js" crossorigin="anonymous"></script>
+<!--Font Awesome Icons-->
+<script src="https://kit.fontawesome.com/6c6d5d6d3e.js" crossorigin="anonymous"></script>
 
-    <!--DEVICON icons-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+<!--DEVICON icons-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
-    <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<!--Google Fonts-->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-    <!--JQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!--JQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
-    <!--BootStrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!--BootStrap-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <!--Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!--Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <!-- Normalize CSS -->
+<!-- Normalize CSS -->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
 
-    <!--STYLES-->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/global.css">
-
-</head>
+<!--STYLES-->
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/navbar.css">
 
 <body class="text-light">
     <!--HEADER - NAVBAR LOGO-->
 
-    <header class="header container-fluid fixed-top">
-        <div class="container">
-            <div class="d-flex justfy-content-between">
-
-                <div class=" col-md-4 col-sm-6 col-xs-8">
-                    <a class="ck-logo" href="#">
-                        <img id="logo"
-                            class="img img-fluid logo-img animate__animated animate__heartBeat animae__infinite"
-                            src="images/ck-logo.png" alt="CKCarr.dev Logo">
-                    </a>
-                </div>
-                <div class=" col-md-4 col-sm-6 col-xs-8">
-                    <!--HEADER - NAVBAR COUNTDOWN-->
-                    <section id="countdown" class="container mt-2">
-                        <div id="countdown-container">
-                            <h3 class="cd-header">Countdown to
-                                Graduation
-                            </h3>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="col-md-4 col-sm-6 col-xs-8">
-                    <!--HEADER - NAVBAR TOGGLE-->
-                    <div class="d-flex justify-content-end">
-
-                    </div>
-                </div>
 
 
+    <header class="header fixed-top">
 
-                <div class="row">
-                    <!--HEADER - NAVBAR LINKS-->
-                    <div class="d-flex-inline align-items-center">
-                        <div class="header-nav mt-2">
-                            <nav class="nav-links ">
-                                <ul class="nav ">
-                                    <li class="nav-item mx-auto">
-                                        <a class="nav-link home-link" href="index.html" target="_blank">Home</a>
-                                    </li>
-                                    <li class="nav-item mx-auto">
-                                        <a class="nav-link about-link" href="about.html" target="_blank">About Me</a>
-                                    </li>
-                                    <li class="nav-item mx-auto">
-                                        <a class="nav-link project-link" href="projects.html"
-                                            target="_blank">Projects</a>
-                                    </li>
-                                    <li class="nav-item mx-auto">
-                                        <a class="nav-link resume-link" href="#RESUME" target="_blank">Resume</a>
-                                    </li>
-                                    <li class="nav-item mx-auto">
-                                        <a class="nav-link contact-link" href="contact.html" target="_blank">Contact
-                                            Me</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
+        <nav class="navbar fixed-top">
+            <a href="#" class="nav-logo">
+                <img id="logo" class="img img-fluid logo-img animate__animated animate__heartBeat animae__infinite"
+                    src="images/ck-logo.png" alt="CKCarr.dev Logo">
+
+            </a>
+
+            <ul class="nav-menu">
+                <li class="nav-item mx-auto">
+                    <a class="nav-link home-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item mx-auto">
+                    <a class="nav-link about-link" href="about.html">About Me</a>
+                </li>
+                <li class="nav-item mx-auto">
+                    <a class="nav-link project-link" href="projects.html">Projects</a>
+                </li>
+                <li class="nav-item mx-auto">
+                    <a class="nav-link resume-link" href="CKResume.pdf" target="_blank">Resume</a>
+                </li>
+                <li class="nav-item mx-auto">
+                    <a class="nav-link contact-link" href="contact.html">Contact Me</a>
+                </li>
+
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
+        </nav>
+        <div id="countdown" class="container">
+            <div id="countdown-container">
+                <h3 class="cd-header">Countdown to
+                    Graduation
+                </h3>
+            </div>
+        </div>
     </header>
 
     <!--MAIN CONTENT-->

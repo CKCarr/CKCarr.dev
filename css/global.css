@@ -56,10 +56,30 @@
 
 }
 
+/* CSS RESET */
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
 
 body {
-        font-family: 'Roboto', 'Outfit' 'Helvetica', 'Arial', sans-serif;
+        font-family:'Outfit', 'Roboto', 'Helvetica', 'Arial', sans-serif;
 }
 
 body,
@@ -82,11 +102,5 @@ html {
     font-size: 24px;
 }
 
-
-
 /*ANIMATION DISPLAYS*/
-
-.intro {
-    overflow: hidden;
-}
 
