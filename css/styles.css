@@ -28,6 +28,9 @@ footer {
     border-bottom: 4px solid var(--color-plum);
 }
 
+img {
+    width: 100%;
+}
 
 header,
 footer {
@@ -360,9 +363,9 @@ input[type=submit]:hover {
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 212px) {
+@media only screen and (max-width: 300px) {
     main {
-        margin-top: 225px;
+        margin-top: 300px;
     }
 
     #tech-tools {
@@ -376,10 +379,6 @@ input[type=submit]:hover {
         margin-top: 350px;
     }
 
-    #countdown {
-        width: 25%;
-    }
-
     #tech-tools {
         width: 75%;
     }
@@ -389,9 +388,7 @@ input[type=submit]:hover {
     main {
         margin-top: 160px;
     }
-    #countdown {
-        width: 25%;
-    }
+
     #tech-tools {
         width: 75%;
     }
@@ -418,13 +415,10 @@ input[type=submit]:hover {
         margin-top: 150px;
     }
 
-    #countdown {
-        width: 50%;
-    }
-
     #tech-tools {
         width: 75%;
     }
+
 }
 
 @media only screen and (max-width: 1200px) {
@@ -433,7 +427,7 @@ input[type=submit]:hover {
     }
 
     #countdown {
-        width: 50%;
+        width: 65%;
     }
 
     #tech-tools {
