@@ -1,0 +1,22 @@
+// .gitignore
+
+// modules
+node_modules
+
+// package files
+package-lock.json
+
+// logs
+logs
+*.log
+
+// build output
+build
+dist
+public
+src
+
+// misc
+.DS_Store
+.env
+*.pem
