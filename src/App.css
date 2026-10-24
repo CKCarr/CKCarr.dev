@@ -62,29 +62,10 @@ img {
     list-style: none;
 }
 
-footer,
-footer a {
-    text-decoration: none;
-    color: theme('colors.darkcyan');
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-footer a,
-.footer-icons,
-footer address {
-    padding-top: 10px;
-    margin-right: 20px;
-}
-
-.footer-icons i {
-    font-size: 2rem;
-}
-
-footer i:hover {
-    color: theme('colors.purple');
-}
-
+/* FOOTER
+   Footer styling now lives in Footer.js using Tailwind utilities.
+   Removed legacy CSS to avoid conflicting styles.
+*/
 
 /* TECH && TOOLS */
 /* #tech-tools {

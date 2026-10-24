@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import logo from "../assets/images/ck-logo.png";
 
@@ -11,13 +11,15 @@ const navItems = [
   { label: "Blog", to: "/blog" },
   { label: "Projects", to: "/projects" },
   { label: "Resume", to: "/resume" },
-  { label: "Contact Me", to: "/#contact", hash: true },
+  { label: "Contact", to: "/#contact", hash: true },
 ];
 
 export default function CustomNavbar() {
   // React state controls whether the mobile menu is visible.
   const [openNav, setOpenNav] = useState(false);
 
+  // Read the current route and URL hash.
+  const location = useLocation();
   useEffect(() => {
     // Close the mobile menu when the screen reaches
     // Tailwind's default lg breakpoint (1024px).
@@ -35,39 +37,51 @@ export default function CustomNavbar() {
     };
   }, []);
 
-  // Shared function renders both normal and hash links.
-  const renderLink = (item) => {
-    const className =
-      "block rounded-md border-2 border-darkcyan " +
-      "px-4 py-2 text-sm text-white " +
-      "hover:border-plum focus-visible:outline " +
-      "focus-visible:outline-2 focus-visible:outline-plum";
+const renderLink = (item) => {
+  // Determine which navigation item represents the current page.
+  // Home and Contact both point to sections of the homepage.
+  const isActive = item.hash
+    ? location.pathname === "/" &&
+      location.hash === `#${item.to.split("#")[1]}`
+    : location.pathname === item.to;
 
-    if (item.hash) {
-      return (
-        <HashLink
-          key={item.to}
-          smooth
-          to={item.to}
-          className={className}
-          onClick={() => setOpenNav(false)}
-        >
-          {item.label}
-        </HashLink>
-      );
-    }
+  // Shared styling for desktop and mobile navigation.
+  const className =
+    "block rounded-md border-2 px-4 py-2 text-sm " +
+    "transition-colors focus-visible:outline " +
+    "focus-visible:outline-2 focus-visible:outline-plum " +
+    (isActive
+      ? "border-paleturquoise bg-darkcyan text-white"
+      : "border-darkcyan text-white hover:border-plum");
 
+  if (item.hash) {
     return (
-      <Link
+      <HashLink
         key={item.to}
+        smooth
         to={item.to}
         className={className}
+        aria-current={isActive ? "location" : undefined}
         onClick={() => setOpenNav(false)}
       >
         {item.label}
-      </Link>
+      </HashLink>
     );
-  };
+  }
+
+  return (
+    <Link
+      key={item.to}
+      to={item.to}
+      className={className}
+      aria-current={isActive ? "page" : undefined}
+      onClick={() => setOpenNav(false)}
+    >
+      {item.label}
+    </Link>
+  );
+};
+
 
   return (
     <header
