@@ -1,30 +1,53 @@
-import React from 'react';
+import React from "react";
 
-function Certifications({ certifications }) {
+export default function Certifications({ certifications }) {
   return (
-    <section className="certifications my-12 p-6 container mx-auto">
-      <h2 className="text-3xl font-bold mb-6 text-center p-2 text-darkcyan">Certifications & Achievements</h2>
+    <section
+      id="certifications"
+      aria-labelledby="certifications-heading"
+      className="mx-auto my-12 w-full px-2 py-6"
+    >
+      <h2
+        id="certifications-heading"
+        className="mb-6 text-center font-outfit text-3xl font-bold text-white"
+      >
+        Certifications & Achievements
+      </h2>
 
-      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-16">
+      {/* Responsive grid:
+          1 column on mobile
+          2 columns on tablets
+          3 columns on larger screens */}
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {certifications.map((certification) => (
-          <div key={certification.id} className="bg-white shadow-lg rounded-lg p-6 border-2 border-darkcyan text-midnightblue">
-            <h3 className="text-xl font-semibold text-purple-600 mb-2">{certification.title}</h3>
-            <p className="text-gray-600 mb-4">
-              <strong>Platform:</strong> {certification.platform}
+          <article
+            key={certification.id}
+            className="flex min-w-0 flex-col rounded-lg border border-darkcyan bg-white p-4 shadow-md"
+          >
+            {/* Credential title */}
+            <h3 className="mb-3 font-outfit text-lg font-semibold leading-snug text-midnightblue">
+              {certification.title}
+            </h3>
+
+            {/* Issuing platform */}
+            <p className="mb-4 text-sm text-gray-700">
+              <span className="font-semibold">Platform: </span>
+              {certification.platform}
             </p>
+
+            {/* Push link to bottom for consistent card alignment */}
             <a
               href={certification.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block border-4 bg-darkpurple border-darkcyan text-plum px-4 py-2 rounded-md hover:border-plum hover:text-white transition"
+              aria-label={`View credential: ${certification.title}`}
+              className="mt-auto inline-flex self-start rounded-md border border-darkcyan bg-darkpurple px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-darkcyan focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-midnightblue"
             >
-              View Certification
+              View Credential
             </a>
-          </div>
+          </article>
         ))}
       </div>
     </section>
   );
 }
-
-export default Certifications;
