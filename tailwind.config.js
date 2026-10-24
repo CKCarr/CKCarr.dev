@@ -33,11 +33,5 @@ module.exports = withMT({
       },
     },
   },
-  plugins: [
-    require('postcss-import'),
-
-    require('tailwindcss'),
-
-    require('autoprefixer'),
-  ],
+  plugins: [],
 });
