@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from "react";
 import ProjectCard from './ProjectCard.js';
 import SearchComponent from './SearchComponent.js';
 import projectsData from '../../data/projects.js';
@@ -9,8 +9,6 @@ import Divider from '../Divider.js';
 function ProjectPortfolio() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTags, setSelectedTags] = useState([]);
-  const [isSticky, setIsSticky] = useState(true);
-  const certificationsRef = useRef(null);
 
   // Extract all unique tags dynamically from projectsData
   const allTags = [...new Set(projectsData.flatMap(project => project.tags))];
@@ -22,27 +20,6 @@ function ProjectPortfolio() {
     return matchesSearch && matchesTags;
   });
 
-  // Intersection Observer for Certifications
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        setIsSticky(!entry.isIntersecting); // Stop sticky when certifications come into view
-      },
-      { threshold: 0.8 }
-    );
-
-    if (certificationsRef.current) {
-      observer.observe(certificationsRef.current);
-    }
-
-    return () => {
-      if (certificationsRef.current) {
-        observer.unobserve(certificationsRef.current);
-      }
-    };
-  }, []);
-
   return (
     <section className="projects my-5 p-6 w-full max-w-screen-xl mx-auto">
       <h1 className="text-center text-5xl font-bold mb-8">
@@ -51,13 +28,13 @@ function ProjectPortfolio() {
         <span className="color-p">Portfolio</span>
       </h1>
 
-      {/* Sticky container for Search Bar and Filters */}
-      <div className={`${isSticky ? 'sticky top-24 z-10' : ''} bg-cornflowerblue bg-opacity-90 shadow-lg`}>
-        {/* Search bar */}
-        <SearchComponent searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-
-
-      </div>
+{/* Search stays in the normal document flow. */}
+<div className="mb-6 rounded-lg bg-cornflowerblue p-4 shadow-md">
+  <SearchComponent
+    searchTerm={searchTerm}
+    setSearchTerm={setSearchTerm}
+  />
+</div>
               {/* Tag filter buttons */}
         <div className="flex flex-wrap justify-center space-2 mt-4">
           {allTags.map((tag, idx) => (
@@ -89,8 +66,8 @@ function ProjectPortfolio() {
       <Divider />
 
       {/* Certifications Section */}
-      <div ref={certificationsRef}>
-        <Certifications certifications={certificationsData} />
+      <div>
+      <Certifications certifications={certificationsData} />
       </div>
     </section>
   );
