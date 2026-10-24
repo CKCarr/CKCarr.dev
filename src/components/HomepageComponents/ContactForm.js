@@ -1,47 +1,147 @@
-import React from 'react';
 
-function ContactForm() {
+import React from "react";
+
+// Keep the existing Formspree endpoint.
+// Later, we can move this into environment configuration.
+const FORM_ENDPOINT = "https://formspree.io/f/xrgngdlq";
+
+// Shared styling keeps all text fields consistent.
+const inputStyles =
+  "w-full rounded-lg border border-darkcyan bg-white " +
+  "px-4 py-3 text-midnightblue placeholder-gray-500 " +
+  "focus:outline-none focus:ring-2 focus:ring-darkcyan";
+
+export default function ContactForm() {
   return (
-    <div  className='mt-5 pt-3 '>
-    <h1  className="text-5xl text-center font-bold d-flex justify-content-center">
-          <span className="color-p">Contact</span>✨<span className="color-b">Me</span>
-        </h1>
-        {/* Contact Form */}
-    <section id="contact" className="container my-5 d-flex justify-content-center text-white ">
-      <div className="container  m-3 bg-cornflowerblue border-4 border-darkcyan d-flex justify-content-center">
+    <section
+      id="contact"
+      aria-labelledby="contact-heading"
+      className="mx-auto max-w-5xl px-4 py-12"
+    >
+      <h2
+        id="contact-heading"
+        className="mb-8 text-center font-outfit text-3xl font-bold text-white"
+      >
+        Contact Me
+      </h2>
+
+      <div className="rounded-xl border-2 border-darkcyan bg-cornflowerblue p-6 shadow-lg md:p-10">
+        {/* Native HTML form submission to Formspree.
+            No JavaScript request handler is required. */}
         <form
-          className="m-5 text-darkpurple"
-          action="https://formspree.io/f/xrgngdlq"
+          action={FORM_ENDPOINT}
           method="POST"
-          data-success="Thank you for your submission!"
+          className="space-y-6"
         >
-          <div className="row">
-            <div className="col-md-6 col-sm-12">
-              <label htmlFor="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="That's ..." required />
+          {/* Two columns on desktop, one on mobile. */}
+          <div className="grid gap-6 md:grid-cols-2">
+            <div>
+              <label
+                htmlFor="firstname"
+                className="mb-2 block font-semibold text-midnightblue"
+              >
+                First Name *
+              </label>
+
+              <input
+                id="firstname"
+                name="firstname"
+                type="text"
+                autoComplete="given-name"
+                required
+                className={inputStyles}
+                placeholder="Your first name"
+              />
             </div>
-            <div className="col-md-6 col-sm-12">
-              <label htmlFor="lname">Last Name</label>
-              <input type="text" id="lname" name="lastname" placeholder="You! ..." />
+
+            <div>
+              <label
+                htmlFor="lastname"
+                className="mb-2 block font-semibold text-midnightblue"
+              >
+                Last Name
+              </label>
+
+              <input
+                id="lastname"
+                name="lastname"
+                type="text"
+                autoComplete="family-name"
+                className={inputStyles}
+                placeholder="Your last name"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="companyname"
+                className="mb-2 block font-semibold text-midnightblue"
+              >
+                Company Name
+              </label>
+
+              <input
+                id="companyname"
+                name="companyname"
+                type="text"
+                autoComplete="organization"
+                className={inputStyles}
+                placeholder="Your company (optional)"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="email"
+                className="mb-2 block font-semibold text-midnightblue"
+              >
+                Email Address *
+              </label>
+
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+                className={inputStyles}
+                placeholder="you@example.com"
+              />
             </div>
           </div>
-          <div className="row">
-            <div className="col-md-6 col-sm-12">
-              <label htmlFor="cname">Company Name</label>
-              <input type="text" id="cname" name="companyname" placeholder="Company ..." />
-            </div>
-            <div className="col-md-6 col-sm-12">
-              <label htmlFor="email">Your Email</label>
-              <input type="email" id="email" name="email" placeholder="E-mail ..." required />
-            </div>
+
+          <div>
+            <label
+              htmlFor="message"
+              className="mb-2 block font-semibold text-midnightblue"
+            >
+              Your Message *
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows={6}
+              required
+              minLength={10}
+              className={inputStyles}
+              placeholder="Tell me what you'd like to discuss..."
+            />
           </div>
-          <label htmlFor="message">Your Message</label>
-          <textarea id="message" name="message" placeholder="Drop me a line, let's Connect! ..." />
-          <input className="form-btn btn btn-primary mt-3 ml-1" type="submit" value="Submit" />
+
+          <button
+            type="submit"
+            className="rounded-lg bg-darkpurple px-8 py-3
+                       font-semibold text-white
+                       transition-colors hover:bg-midnightblue
+                       focus-visible:outline focus-visible:outline-2
+                       focus-visible:outline-offset-2
+                       focus-visible:outline-white"
+          >
+            Send Message
+          </button>
         </form>
       </div>
-    </section></div>
+    </section>
   );
 }
-
-export default ContactForm;
