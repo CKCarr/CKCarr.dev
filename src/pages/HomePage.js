@@ -1,41 +1,35 @@
-import React from 'react';
-import HeroSection from '../components/HomepageComponents/HeroSection.js';
-import AboutSection from '../components/HomepageComponents/AboutSection.js';
-import TechnologiesTools from '../components/HomepageComponents/TechnologiesTools.js';
-import ScrollingBanner from '../components/HomepageComponents/ScrollingBanner.js';
-import CTAGithub from '../components/HomepageComponents/CTAGithub.js';
-import CTALinkedin from '../components/HomepageComponents/CTALinkedin.js';
-import ContactForm from '../components/HomepageComponents/ContactForm.js'
-import Divider from '../components/Divider.js';
 
+import React from "react";
 
-function HomePage() {
+import HeroSection from "../components/HomepageComponents/HeroSection.js";
+import AboutSection from "../components/HomepageComponents/AboutSection.js";
+import TechnologiesTools from "../components/HomepageComponents/TechnologiesTools.js";
+import CTAGithub from "../components/HomepageComponents/CTAGithub.js";
+import ScrollingBanner from "../components/HomepageComponents/ScrollingBanner.js";
+import CTALinkedin from "../components/HomepageComponents/CTALinkedin.js";
+import ContactForm from "../components/HomepageComponents/ContactForm.js";
+import Divider from "../components/Divider.js";
+
+export default function HomePage() {
   return (
-    <div >
-      <div id='home' className=''>
+    <main>
+      {/* Each section manages its own layout and section ID. */}
       <HeroSection />
-      </div>
-      <Divider/>
-      <div id='about' className=''>
-      <AboutSection  />
-      </div>
-      <Divider/>
-      <div id='techtools'>
-      <TechnologiesTools />
-      </div>
-      <Divider/>
-      <div>
-      <CTAGithub />
-      <ScrollingBanner/>
-      <CTALinkedin />
-      </div>
-      <Divider/>
-      <div id='contact' className=''>
-      <ContactForm/>
-      </div>
+      <Divider />
 
-    </div>
+      <AboutSection />
+      <Divider />
+
+      <TechnologiesTools />
+      <Divider />
+
+      {/* Keep these three components in their existing order. */}
+      <CTAGithub />
+      <ScrollingBanner />
+      <CTALinkedin />
+      <Divider />
+
+      <ContactForm />
+    </main>
   );
 }
-
-export default HomePage;
