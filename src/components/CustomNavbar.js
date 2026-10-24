@@ -1,163 +1,140 @@
-import {
-  Navbar,
-  Button,
-  IconButton,
-} from "@material-tailwind/react";
+
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
-import { useState, useEffect } from "react";
-import logo from '../assets/images/ck-logo.png';
+import { HashLink } from "react-router-hash-link";
+import logo from "../assets/images/ck-logo.png";
+
+// One navigation list shared by desktop and mobile.
+// This prevents the two menus from becoming inconsistent.
+const navItems = [
+  { label: "Home", to: "/#home", hash: true },
+  { label: "Blog", to: "/blog" },
+  { label: "Projects", to: "/projects" },
+  { label: "Resume", to: "/resume" },
+  { label: "Contact Me", to: "/#contact", hash: true },
+];
 
 export default function CustomNavbar() {
+  // React state controls whether the mobile menu is visible.
   const [openNav, setOpenNav] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("resize", () =>
-      window.innerWidth >= 960 ? setOpenNav(false) : null
-    );
+    // Close the mobile menu when the screen reaches
+    // Tailwind's default lg breakpoint (1024px).
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setOpenNav(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup prevents listeners from accumulating.
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
-  // Reusable links to keep consistency across desktop and mobile menus
-  const desktopNavLinks = (
-    <>
-      <HashLink smooth to="/#home" onClick={() => setOpenNav(false)}>
-        <Button
-          variant="text"
-          className="text-white text-sm border-2 border-darkcyan hover:border-plum w-full lg:w-auto px-4 py-2 transition-all"
-        >
-          🏠 Home
-        </Button>
-      </HashLink>
-      <Link to="/blog" onClick={() => setOpenNav(false)}>
-        <Button
-          variant="text"
-          className="text-white text-sm border-2 border-darkcyan hover:border-plum w-full lg:w-auto px-4 py-2 transition-all"
-        >
-          👋 Blog
-        </Button>
-      </Link>
-      <Link to="/projects" onClick={() => setOpenNav(false)}>
-        <Button
-          variant="text"
-          className="text-white text-sm border-2 border-darkcyan hover:border-plum w-full lg:w-auto px-4 py-2 transition-all"
-        >
-          🗃️ Projects
-        </Button>
-      </Link>
-      <Link to="/resume" onClick={() => setOpenNav(false)}>
-        <Button
-          variant="text"
-          className="text-white text-sm border-2 border-darkcyan hover:border-plum w-full lg:w-auto px-4 py-2 transition-all"
-        >
-          📄 Resume
-        </Button>
-      </Link>
-      <HashLink smooth to="/#contact" onClick={() => setOpenNav(false)}>
-        <Button
-          variant="text"
-          className="text-white text-sm border-2 border-darkcyan hover:border-plum w-full lg:w-auto px-4 py-2 transition-all"
-        >
-          📩 Contact Me
-        </Button>
-      </HashLink>
-    </>
-  );
+  // Shared function renders both normal and hash links.
+  const renderLink = (item) => {
+    const className =
+      "block rounded-md border-2 border-darkcyan " +
+      "px-4 py-2 text-sm text-white " +
+      "hover:border-plum focus-visible:outline " +
+      "focus-visible:outline-2 focus-visible:outline-plum";
 
-  const mobileNavLinks = (
-    <>
-      <HashLink smooth to="/#home" onClick={() => setOpenNav(false)}>
-        <Button
-          variant="text"
-          className="text-white text-sm w-full px-1 py-1 border-l-2  border-r-2 border-darkcyan hover:border-plum transition-all"
+    if (item.hash) {
+      return (
+        <HashLink
+          key={item.to}
+          smooth
+          to={item.to}
+          className={className}
+          onClick={() => setOpenNav(false)}
         >
-          🏠 Home
-        </Button>
-      </HashLink>
-      <Link to="/blog" onClick={() => setOpenNav(false)}>
-        <Button
-          variant="text"
-          className="text-white text-sm w-full px-1 py-1 border-l-2 border-r-2 border-darkcyan hover:border-plum transition-all"
-        >
-          👋 Blog
-        </Button>
+          {item.label}
+        </HashLink>
+      );
+    }
+
+    return (
+      <Link
+        key={item.to}
+        to={item.to}
+        className={className}
+        onClick={() => setOpenNav(false)}
+      >
+        {item.label}
       </Link>
-      <Link to="/projects" onClick={() => setOpenNav(false)}>
-        <Button
-          variant="text"
-          className="text-white text-sm w-full px-1 py-1 border-l-2 border-r-2 border-darkcyan hover:border-plum transition-all"
-        >
-          🗃️ Projects
-        </Button>
-      </Link>
-      <Link to="/resume" onClick={() => setOpenNav(false)}>
-        <Button
-          variant="text"
-          className="text-white text-sm w-full px-1 py-1 border-l-2 border-r-2 border-darkcyan hover:border-plum transition-all"
-        >
-          📄 Resume
-        </Button>
-      </Link>
-      <HashLink smooth to="/#contact" onClick={() => setOpenNav(false)}>
-        <Button
-          variant="text"
-          className="text-white text-sm w-full px-1 py-1 border-l-2 border-r-2 border-darkcyan hover:border-plum transition-all"
-        >
-          📩 Contact Me
-        </Button>
-      </HashLink>
-    </>
-  );
+    );
+  };
 
   return (
-    <>
-      {/* Desktop Navbar */}
-      <Navbar id="header" className="fixed flex top-0 z-40 bg-midnightblue px-4 py-2 mb-4 w-full xl:w-full max-w-none">
-        <div className="w-full mx-auto flex items-center justify-between text-white">
-          {/* Logo */}
-          <a href="/" className="flex items-center">
-            <img id="logo" className="logo-img h-16 w-16" src={logo} alt="Logo" />
-          </a>
+    <header
+      id="header"
+      className="fixed inset-x-0 top-0 z-50 bg-midnightblue"
+    >
+      <nav
+        className="mx-auto flex w-full items-center
+                   justify-between px-4 py-2"
+        aria-label="Main navigation"
+      >
+        {/* Logo links to the homepage. */}
+        <Link
+          to="/"
+          className="flex items-center"
+          onClick={() => setOpenNav(false)}
+        >
+          <img
+            src={logo}
+            alt="CKCarr portfolio homepage"
+            className="h-16 w-16 rounded-full object-contain"
+          />
+        </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex xl:flex space-x-6">
-            {desktopNavLinks}
-          </div>
-
-          {/* Mobile Hamburger Icon */}
-          <IconButton
-            variant="text"
-            className="lg:hidden text-white"
-            ripple={false}
-            onClick={() => setOpenNav(!openNav)}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="h-6 w-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </IconButton>
+        {/* Desktop navigation is visible at lg and above. */}
+        <div className="hidden items-center gap-4 lg:flex">
+          {navItems.map(renderLink)}
         </div>
-      </Navbar>
 
-      {/* Mobile Navigation */}
-      {openNav && (
-        <div className="lg:hidden bg-midnightblue mt-5 bg-opacity-75 h-3/4 w-1/5 fixed top-14 left-0 z-20 transition-all duration-300 ease-in-out">
-          <div className="container mx-auto flex flex-col items-center space-y-8 py-12 text-center">
-            {/* Close Button in the Mobile Nav */}
-            <IconButton
-              variant="text"
-              className="absolute top-4 right-4 text-white"
-              ripple={false}
-              onClick={() => setOpenNav(false)}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="h-6 w-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </IconButton>
+        {/* Mobile menu toggle. */}
+        <button
+          type="button"
+          className="rounded-md border border-darkcyan
+                     p-2 text-white lg:hidden"
+          aria-label={openNav ? "Close menu" : "Open menu"}
+          aria-expanded={openNav}
+          aria-controls="mobile-navigation"
+          onClick={() => setOpenNav((previous) => !previous)}
+        >
+          {openNav ? (
+            <span aria-hidden="true" className="text-2xl">
+              ×
+            </span>
+          ) : (
+            <span aria-hidden="true" className="text-2xl">
+              ☰
+            </span>
+          )}
+        </button>
+      </nav>
 
-            {/* Mobile Links */}
-            {mobileNavLinks}
-          </div>
+      {/* Mobile navigation remains mounted so aria-controls
+          always refers to an existing element. */}
+      <div
+        id="mobile-navigation"
+        hidden={!openNav}
+        className={
+          "absolute left-0 top-full w-full " +
+          "border-t border-darkcyan bg-midnightblue " +
+          "p-4 shadow-lg lg:hidden " +
+          (!openNav ? "hidden" : "")
+        }
+      >
+        <div className="flex flex-col gap-3">
+          {navItems.map(renderLink)}
         </div>
-      )}
-    </>
+      </div>
+    </header>
   );
 }
