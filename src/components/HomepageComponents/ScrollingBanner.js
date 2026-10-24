@@ -1,18 +1,41 @@
-import React from 'react';
-import messages from '../../data/messages.js'
 
-function ScrollingBanner() {
+import React from "react";
+import messages from "../../data/messages.js";
+
+export default function ScrollingBanner() {
   return (
-    <div className="relative overflow-hidden bg-cornflowerblue text-brightturquoise py-4 p-2">
-      <div className="animate-scroll whitespace-nowrap">
-        {messages.map((message, index) => (
-          <span key={index} className="inline-block mx-6 text-xl">
-            {message}
-          </span>
-        ))}
+    <section
+      aria-label="Learning and development messages"
+      className="overflow-hidden bg-cornflowerblue py-5"
+    >
+      <div className="banner-track flex w-max">
+        {/* First copy: the content screen readers should announce */}
+        <div className="flex shrink-0 items-center gap-12 pr-12">
+          {messages.map((message, index) => (
+            <span
+              key={index}
+              className="whitespace-nowrap font-outfit text-base font-normal text-white md:text-lg"
+            >
+              {message}
+            </span>
+          ))}
+        </div>
+
+        {/* Second copy: visual duplicate for seamless looping */}
+        <div
+          aria-hidden="true"
+          className="flex shrink-0 items-center gap-12 pr-12"
+        >
+          {messages.map((message, index) => (
+            <span
+              key={index}
+              className="whitespace-nowrap font-outfit text-base font-normal text-white md:text-lg"
+            >
+              {message}
+            </span>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
-
-export default ScrollingBanner;
