@@ -13,12 +13,24 @@ function ProjectPortfolio() {
   // Extract all unique tags dynamically from projectsData
   const allTags = [...new Set(projectsData.flatMap(project => project.tags))];
 
-  // Filter projects based on search and selected tags
-  const filteredProjects = projectsData.filter(project => {
-    const matchesSearch = project.name.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesTags = selectedTags.length === 0 || selectedTags.every(tag => project.tags.includes(tag));
-    return matchesSearch && matchesTags;
-  });
+  
+// Filter projects using the search bar and selected technologies.
+const filteredProjects = projectsData.filter((project) => {
+  // Check whether the project name contains the search text.
+  const matchesSearch = project.name
+    .toLowerCase()
+    .includes(searchTerm.toLowerCase());
+
+  // Check whether the project uses ANY selected technology.
+  // If nothing is selected, allow all technologies.
+  const matchesTags =
+    selectedTags.length === 0 ||
+    selectedTags.some((tag) => project.tags.includes(tag));
+
+  // IMPORTANT:
+  // Only keep projects that match BOTH conditions.
+  return matchesSearch && matchesTags;
+});
 
   return (
     <section className="projects my-5 p-6 w-full max-w-screen-xl mx-auto">
@@ -51,7 +63,7 @@ function ProjectPortfolio() {
       <Divider />
 
       {/* Projects Grid */}
-      <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-6 w-full ">
+      <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
         {filteredProjects.length > 0 ? (
           filteredProjects.map(project => (
             <ProjectCard key={project.id} project={project} />

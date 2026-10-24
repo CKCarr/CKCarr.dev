@@ -1,15 +1,20 @@
-import React from 'react';
 
-function TagsComponent({ tags }) {
+import React from "react";
+
+export default function TagsComponent({ tags }) {
   return (
-    <div className=" p-1 border-2 border-darkcyan bg-darkpurple" >
-      {tags.map((tag, index) => (
-        <span key={index} className="px-2 py-1 text-sm rounded-md font-outfit text-plum  ">
+    <ul
+      aria-label="Technologies used"
+      className="flex w-full min-w-0 flex-wrap gap-2"
+    >
+      {tags.map((tag) => (
+        <li
+          key={tag}
+          className="max-w-full rounded-md border border-darkcyan bg-midnightblue px-3 py-1 font-outfit text-sm text-plum break-words"
+        >
           {tag}
-        </span>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
-
-export default TagsComponent;

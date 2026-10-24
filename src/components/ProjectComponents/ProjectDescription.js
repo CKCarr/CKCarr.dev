@@ -1,34 +1,35 @@
-import React, { useState } from 'react';
-import { Typography } from '@material-tailwind/react';
 
-function ProjectDescription({ name, description }) {
+import React, { useState } from "react";
+
+export default function ProjectDescription({ name, description }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const MAX_LENGTH = 100;
-
-  const toggleDescription = () => {
-    setIsExpanded(!isExpanded);
-  }
-
-  const renderDescription = () => {
-    if (isExpanded || description.length <= MAX_LENGTH ) {
-      return description;
-    }
-    return `${description.substring(0, MAX_LENGTH)}...`;
-  }
+  const isLong = description.length > MAX_LENGTH;
 
   return (
-    <div className="">
-      <Typography variant="h5" color="white" className="mb-2 text-plum">{name}</Typography>
-      <Typography variant="body2" color="gray-200" className="text-white mb-4">{renderDescription()}
-        {description.length > MAX_LENGTH && (
-          <button onClick={toggleDescription} className="text-white hover:text-plum transition">
-            {isExpanded ? 'Show less' : 'Show more'}
-          </button>
+    <div>
+      <h2 className="mb-2 font-outfit text-xl font-semibold text-plum">
+        {name}
+      </h2>
+
+      <p className="text-sm leading-relaxed text-white">
+        {isExpanded || !isLong
+          ? description
+          : `${description.slice(0, MAX_LENGTH)}...`}
+
+        {isLong && (
+          <>
+            {" "}
+            <button
+              type="button"
+              onClick={() => setIsExpanded((previous) => !previous)}
+              className="font-semibold text-paleturquoise underline hover:text-white"
+            >
+              {isExpanded ? "Show less" : "Show more"}
+            </button>
+          </>
         )}
-
-      </Typography>
+      </p>
     </div>
-  )
+  );
 }
-
-export default ProjectDescription;

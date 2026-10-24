@@ -1,42 +1,38 @@
-import React from 'react';
-import { Card } from '@material-tailwind/react';
-import ProjectImg from './ProjectImg';
-import ProjectDescription from './ProjectDescription';
-import TagsComponent from './TagsComponent';
+import React from "react";
+import ProjectImg from "./ProjectImg";
+import ProjectDescription from "./ProjectDescription";
+import TagsComponent from "./TagsComponent";
 
-function ProjectCard({ project }) {
+export default function ProjectCard({ project }) {
   return (
-    <div className="group relative w-full p-4">
-      <Card className="relative overflow-hidden shadow-lg rounded-lg transform transition-transform hover:scale-105 w-full h-80 hover:border-2 hover:border-darkcyan">
-        {/* Project Image */}
-        <ProjectImg src={project.image} alt={project.name} />
+    <article className="flex h-full flex-col overflow-hidden rounded-lg border border-darkcyan bg-darkpurple shadow-md transition-colors hover:border-plum">
+      {/* Shorter image area for a more compact card. */}
+      <div className="h-44 overflow-hidden border-b border-darkcyan bg-midnightblue sm:h-48">
+        <ProjectImg
+          src={project.image}
+          alt={`Screenshot or illustration for ${project.name}`}
+        />
+      </div>
 
-        {/* Overlay for project details */}
-        <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
-          <div className="text-center">
-            {/* Project Title */}
-            <ProjectDescription name={project.name} description={project.description} />
-          </div>
-          {/* Tags and View Project Button */}
-          <div className="flex flex-col items-center">
-            <TagsComponent tags={project.tags} />
-            {project.link && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 text-md border-2 border-darkcyan text-plum px-4 py-2 rounded hover:bg-darkpurple hover:border-2 hover:border-plum hover:text-white transition"
-              >
-                View Project
-              </a>
-            )}
-          </div>
-        </div>
-      </Card>
-    </div>
+      <div className="flex min-w-0 flex-1 flex-col gap-3 p-4">
+        <ProjectDescription
+          name={project.name}
+          description={project.description}
+        />
+
+        <TagsComponent tags={project.tags} />
+
+        {project.link && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-auto inline-flex self-start rounded-md border border-darkcyan px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-darkcyan focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          >
+            View Project
+          </a>
+        )}
+      </div>
+    </article>
   );
 }
-
-export default ProjectCard;
-
-
