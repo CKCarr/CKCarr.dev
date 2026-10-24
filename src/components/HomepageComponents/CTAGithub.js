@@ -1,28 +1,47 @@
-import React from 'react';
-import appList from '../../assets/images/app-list.png';
 
-function CTAGithub() {
+import React from "react";
+import appList from "../../assets/images/app-list.png";
+
+export default function CTAGithub() {
   return (
-    <section className="building-art my-5 p-1">
-      <div className="container d-flex justify-content-center">
-        <div className="art-img row">
-          <img className="col col-lg-4 col-md-4 col-sm-6 mx-auto w-50" src={appList} alt="App list icon" />
-          <div className="building-art-content col col-lg-4 col-md-4 col-sm-6 mx-auto w-50">
-            <h5 className="text-info mt-5 ">Full-Stack Software Development</h5>
-            <h1 className="my-3 text-2xl">Crafting Solutions Through Code</h1>
-            <p className="mb-4">
-            Discover projects that showcase collaboration, creativity, and continuous learning.  I’m constantly evolving my craft. Join me on a journey of growth and innovation.
-            </p>
-            <button type="button" className="github-btn btn btn-md btn-info mx-auto">
-              <a href="https://github.com/CKCarr">
-                <i className="bi bi-github"> GITHUB</i>
-              </a>
-            </button>
-          </div>
+    <section className="mx-auto max-w-6xl px-4 py-12">
+      <div className="grid items-center gap-8 md:grid-cols-2">
+        {/* Existing illustration */}
+        <img
+          src={appList}
+          alt="Illustration representing software applications"
+          loading="lazy"
+          className="mx-auto w-full max-w-sm"
+        />
+
+        {/* GitHub introduction */}
+        <div>
+          <p className="mb-3 text-lg font-semibold text-paleturquoise">
+            Full-Stack Software Development
+          </p>
+
+          <h2 className="mb-4 font-outfit text-3xl font-bold text-white">
+            Crafting Solutions Through Code
+          </h2>
+
+          <p className="mb-6 leading-relaxed text-white">
+            Discover projects that showcase collaboration,
+            creativity, and continuous learning.
+            I’m constantly evolving my craft.
+            Join me on a journey of growth and innovation.
+          </p>
+
+          {/* External link styled as a button */}
+          <a
+            href="https://github.com/CKCarr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-lg bg-darkcyan px-6 py-3 font-semibold text-white transition-colors hover:bg-darkpurple focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          >
+            View My GitHub
+          </a>
         </div>
       </div>
     </section>
   );
 }
-
-export default CTAGithub;
