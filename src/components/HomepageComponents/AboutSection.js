@@ -13,7 +13,7 @@ function AboutSection() {
           imageSrc={storyImage}
           title="My Story"
           content="As a full stack developer, I'm excited to bring my passion for creativity and problem-solving to every project I undertake. After spending years in the healthcare industry, I transitioned into tech with a fresh drive to create innovative solutions and continuously expand my knowledge."
-          cardClass="animate__animated animate__fadeInUp animate__delay-2s w-1/2"
+          cardClass="animate__animated animate__fadeInUp animate__delay-2s"
         />
 
         {/* Card 2 - My Process */}
@@ -21,7 +21,7 @@ function AboutSection() {
           imageSrc={processImage}
           title="My Process"
           content="I aim to work closely with clients to fully understand their unique needs and preferences, ensuring each project reflects their vision. By fostering open communication and collaboration, I can deliver high-quality, custom solutions that align with client goals and expectations."
-          cardClass="w-1/2 animate__animated animate__fadeInUp animate__delay-3s"
+          cardClass="animate__animated animate__fadeInUp animate__delay-2s"
         />
 
         {/* Card 3 - My Goals (Centered Below the Two Cards) */}
@@ -30,7 +30,7 @@ function AboutSection() {
             imageSrc={goalsImage}
             title="My Goals"
             content="I’m dedicated to growing as a developer and continuously refining my skills. My focus is on building intuitive, user-friendly websites, designing engaging interfaces, and solving real-world challenges for businesses and individuals. "
-            cardClass="w-3/4 animate__animated animate__fadeInUp animate__delay-4s"
+            cardClass="animate__animated animate__fadeInUp animate__delay-2s"
           />
         </div>
       </div>
