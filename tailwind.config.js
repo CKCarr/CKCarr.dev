@@ -20,6 +20,19 @@ module.exports = withMT({
         purple: '#7500ac',
         darkpurple: '#2d0042',
         brightpink: '#f700ff',
+        // Portfolio V3 design colors.
+        // Keep the existing V2 colors until every component has been migrated.
+        v3: {
+          ink: "#241d31",       // Primary text
+          muted: "#625b6b",     // Secondary text
+          paper: "#faf8f5",     // Main page background
+          plum: "#261744",      // Dark purple surfaces
+          violet: "#6952c7",    // Links and accents
+          lavender: "#efebfa",  // Light purple surfaces
+          teal: "#08736b",      // Action and accent color
+          mint: "#e1f4ef",      // Light teal surfaces
+          line: "#e4dfea",      // Borders
+        },
       },
       fontFamily: {
         outfit: ['Outfit', 'sans-serif'],
