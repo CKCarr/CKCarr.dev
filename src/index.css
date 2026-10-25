@@ -1,0 +1,67 @@
+/* Generate Tailwind's base/reset styles. */
+@tailwind base;
+
+/* Generate component classes. */
+@tailwind components;
+
+/* Generate utility classes. */
+@tailwind utilities;
+
+/* Existing global styles. */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Two identical content groups create a continuous loop. */
+@keyframes banner-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    /* Move exactly one of the two identical groups. */
+    transform: translateX(-50%);
+  }
+}
+
+.banner-track {
+  animation: banner-scroll 25s linear infinite;
+}
+
+/* Pause movement when a user hovers over the banner. */
+.banner-track:hover {
+  animation-play-state: paused;
+}
+
+/* Disable animation for users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  .banner-track {
+    animation: none;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .banner-track > div {
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+
+  .banner-track > div[aria-hidden="true"] {
+    display: none;
+  }
+
+  .banner-track span {
+    white-space: normal;
+  }
+}

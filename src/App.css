@@ -1,0 +1,109 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Apply the default font globally */
+body {
+  font-family: 'Outfit', "Roboto", sans-serif;
+  @apply bg-midnightblue text-white;
+}
+
+/* Global link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Make images easier to work with */
+
+img {
+    width: 100%;
+}
+.color-b {
+    color: theme('colors.darkcyan');
+}
+
+.color-p {
+    color: theme('colors.plum');
+}
+
+/* NAVIGATION */
+
+
+/* FOOTER
+   Footer styling now lives in Footer.js using Tailwind utilities.
+   Removed legacy CSS to avoid conflicting styles.
+*/
+
+/* TECH && TOOLS */
+/* #tech-tools {
+    width: 75%;
+} */
+
+/* FORM CSS */
+
+form label {
+    font-family: theme('fontFamily.outfit');
+    font-size: large;
+    color: theme('colors.white');
+    padding-left: 0.5rem;
+}
+
+::placeholder {
+    color: theme('colors.plum');
+    font-size: small;
+    font-family: theme('fontFamily.outfit');
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    background: theme('colors.darkpurple');
+    width: 100%;
+    padding: 8px;
+    border: 2px solid theme('colors.darkcyan');
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+#contact-form-section textarea {
+    height: 200px;
+    width: 300px;
+}
+
+/* FORM BUTTON STYLES */
+input[type=submit] {
+    background-color: theme('colors.darkpurple');
+    color: theme('colors.plum');
+    padding: 12px 20px;
+    border: 4px solid theme('colors.darkcyan');
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: theme('fontFamily.outfit');
+    font-size: 1.2rem;
+    width: 60%;
+}
+
+input[type=submit]:hover {
+    border: 4px solid theme('colors.plum');
+    background-color: theme('colors.darkpurple');
+    color: theme('colors.plum');
+}
+
+/* BUTTON STYLES */
+.btn {
+    width: 45%;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: theme('fontFamily.outfit');
+    font-size: 1.2rem;
+}
