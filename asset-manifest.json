@@ -1,36 +1,36 @@
 {
   "files": {
-    "main.css": "/static/css/main.12ffcc2f.css",
-    "main.js": "/static/js/main.06d0a040.js",
+    "main.css": "/static/css/main.bebcc73b.css",
+    "main.js": "/static/js/main.9d11fd52.js",
     "static/media/headphones.png": "/static/media/headphones.79bd9bee61d098b3dc42.png",
     "static/media/BreakfastHacksprint-project.png": "/static/media/BreakfastHacksprint-project.f0c11df0a71164fb2bfb.png",
     "static/media/pc-monitor.png": "/static/media/pc-monitor.d83b34b954ab2709968c.png",
     "static/media/MuseumOfImagination-project.png": "/static/media/MuseumOfImagination-project.f87cc8b24846557afa2e.png",
-    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
     "static/media/CKCarrillo-RESUME.pdf": "/static/media/CKCarrillo-RESUME.d9b09fb15c4f96fbae16.pdf",
     "static/media/mobile-contact.png": "/static/media/mobile-contact.9a2d2cf782895b0b1fe2.png",
     "static/media/app-list.png": "/static/media/app-list.b847f42bcc97187c8943.png",
     "static/media/ck-logo.png": "/static/media/ck-logo.f77eb147723f240d6870.png",
-    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
-    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
-    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
-    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.7f1b72aed11d638e7d5a.woff",
+    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.78be1a7fd85891ea64a5.woff2",
     "static/media/story.png": "/static/media/story.8f7a82b2a0a100542af6.png",
     "static/media/goals.png": "/static/media/goals.6474f42c44ea4052f5aa.png",
-    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
-    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
+    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
     "static/media/process2.png": "/static/media/process2.fde37f769d18abee91a9.png",
     "static/media/discover-text.png": "/static/media/discover-text.70cb508cd8bc1f7c7551.png",
     "static/media/EmployeeManager.png": "/static/media/EmployeeManager.238da3fee41feaa80c28.png",
-    "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.bc3722686635b5f86132.woff2",
-    "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
-    "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
+    "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
+    "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
+    "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/index.html",
-    "main.12ffcc2f.css.map": "/static/css/main.12ffcc2f.css.map",
-    "main.06d0a040.js.map": "/static/js/main.06d0a040.js.map"
+    "main.bebcc73b.css.map": "/static/css/main.bebcc73b.css.map",
+    "main.9d11fd52.js.map": "/static/js/main.9d11fd52.js.map"
   },
   "entrypoints": [
-    "static/css/main.12ffcc2f.css",
-    "static/js/main.06d0a040.js"
+    "static/css/main.bebcc73b.css",
+    "static/js/main.9d11fd52.js"
   ]
 }
