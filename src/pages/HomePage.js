@@ -15,19 +15,19 @@ export default function HomePage() {
     <main>
       {/* Each section manages its own layout and section ID. */}
       <HeroSection />
-      <Divider />
+      {/* <Divider /> */}
 
-      <AboutSection />
-      <Divider />
+      {/* <AboutSection /> */}
+      {/* <Divider /> */}
 
-      <TechnologiesTools />
-      <Divider />
+      {/* <TechnologiesTools /> */}
+      {/* <Divider /> */}
 
       {/* Keep these three components in their existing order. */}
-      <CTAGithub />
+      {/* <CTAGithub /> */}
       <ScrollingBanner />
-      <CTALinkedin />
-      <Divider />
+      {/* <CTALinkedin /> */}
+      {/* <Divider /> */}
 
       <ContactForm />
     </main>

@@ -35,7 +35,7 @@ code {
 }
 
 .banner-track {
-  animation: banner-scroll 25s linear infinite;
+  animation: banner-scroll 60s linear infinite;
 }
 
 /* Pause movement when a user hovers over the banner. */
