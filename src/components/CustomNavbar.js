@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import logo from "../assets/images/ck-logo.png";
+import Container from "./Container";
 
 // One navigation list shared by desktop and mobile.
 // This prevents the two menus from becoming inconsistent.
@@ -83,7 +84,9 @@ const renderLink = (item) => {
 
 
   return (
-    <header
+    <Container>
+    {/* Existing logo and navigation */}
+     <header
       id="header"
       className="fixed inset-x-0 top-0 z-50 bg-midnightblue"
     >
@@ -149,5 +152,7 @@ const renderLink = (item) => {
         </div>
       </div>
     </header>
+  </Container>
+
   );
 }

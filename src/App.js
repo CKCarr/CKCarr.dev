@@ -11,7 +11,8 @@ import './App.css';
 
 function App() {
   return (
-      <div className="min-h-screen bg-gradient-to-b from-midnightblue via-cornflowerblue via-paleturquoise via-plum via-purple to-midnightblue text-white">
+      // <div className="min-h-screen bg-midnightblue text-white">
+        <div className="min-h-screen bg-v3-paper text-v3-text-primary">
 
         <Router>
         <ScrollToTop />

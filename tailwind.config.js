@@ -23,16 +23,38 @@ module.exports = withMT({
         // Portfolio V3 design colors.
         // Keep the existing V2 colors until every component has been migrated.
         v3: {
-          ink: "#241d31",       // Primary text
-          muted: "#625b6b",     // Secondary text
-          paper: "#faf8f5",     // Main page background
-          plum: "#261744",      // Dark purple surfaces
-          violet: "#6952c7",    // Links and accents
-          lavender: "#efebfa",  // Light purple surfaces
-          teal: "#08736b",      // Action and accent color
-          mint: "#e1f4ef",      // Light teal surfaces
-          line: "#e4dfea",      // Borders
-        },
+  // FOUNDATION COLORS
+  // The core colors used throughout the portfolio.
+  ink: "#241d31",
+  muted: "#625b6b",
+  paper: "#faf8f5",
+  plum: "#261744",
+  violet: "#6952c7",
+  lavender: "#efebfa",
+  teal: "#08736b",
+  mint: "#e1f4ef",
+  line: "#e4dfea",
+
+  // SEMANTIC TEXT COLORS
+  // These describe purpose rather than a particular component.
+  text: {
+    primary: "#241d31",
+    secondary: "#625b6b",
+    inverse: "#ffffff",
+    inverseMuted: "#e5dff0",
+    accent: "#08736b",
+    accentInverse: "#b9f3e9",
+  },
+
+  // INTERACTIVE COLORS
+  // Shared by buttons, links, and other interactive elements.
+  action: {
+    primary: "#261744",
+    primaryHover: "#42305f",
+    secondary: "#e1f4ef",
+    secondaryHover: "#c7fff3",
+  },
+},
       },
       fontFamily: {
         outfit: ['Outfit', 'sans-serif'],
