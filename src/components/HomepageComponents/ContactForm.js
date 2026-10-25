@@ -16,7 +16,9 @@ export default function ContactForm() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="mx-auto max-w-5xl px-4 py-12"
+      // scroll-mt-28 adds an offset for the fixed navbar
+      // when navigating to #contact.
+      className="mx-auto max-w-5xl scroll-mt-28 px-4 py-12"
     >
       <h2
         id="contact-heading"

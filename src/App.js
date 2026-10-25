@@ -6,6 +6,7 @@ import ProjectsPage from './pages/ProjectsPage';
 import BlogPage from './pages/BlogPage';
 import ResumePage from './pages/ResumePage'
 import Footer from './components/Footer';
+import ScrollToTop from "./components/ScrollToTop";
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <div className="min-h-screen bg-gradient-to-b from-midnightblue via-cornflowerblue via-paleturquoise via-plum via-purple to-midnightblue text-white">
 
         <Router>
+        <ScrollToTop />
         <CustomNavbar />
         <Routes>
           <Route path="/" element={<HomePage />} />

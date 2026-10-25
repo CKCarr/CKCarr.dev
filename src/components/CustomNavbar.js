@@ -58,7 +58,6 @@ const renderLink = (item) => {
     return (
       <HashLink
         key={item.to}
-        smooth
         to={item.to}
         className={className}
         aria-current={isActive ? "location" : undefined}
