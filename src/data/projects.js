@@ -34,7 +34,7 @@ const projectsData = [
   {
     id: 5,
     name: "Mock AirBnB Clone",
-    image: require("../assets/images/ck-logo.png"),
+    image: require("../assets/images/projects/hbnb.png"),
     description: "Built a clone of AirBnB using Python, HTML, CSS, and MySQL.",
     tags: ["Python", "Flask", "MySQL", "HTML", "CSS"],
     link: "https://github.com/CKCarr/holbertonschool-AirBnB_clone_v4"
@@ -42,7 +42,7 @@ const projectsData = [
   {
     id: 6,
     name: "A Way Home - Pet Lost & Found App",
-    image: require("../assets/images/ck-logo.png"),
+    image: require("../assets/images/projects/awayhome.png"),
     description: "Capstone project for a lost and found pet application using React and Next.js.",
     tags: ["Next.js", "React", "Tailwind CSS", "API", "Express"],
     link: "https://www.youtube.com/watch?v=z-WmWKJJnDc"
@@ -50,7 +50,7 @@ const projectsData = [
   {
     id: 7,
     name: "Cinema Guru - React Movie App",
-    image: require("../assets/images/ck-logo.png"),
+    image: require("../assets/images/projects/cinemaguru.png"),
     description: "Created a React front-end app connecting to a movie API with login and 'Watch Later' features.",
     tags: ["React", "JavaScript", "Movie API", "Login"],
     link: "https://github.com/CKCarr/atlas-cinema-guru"
@@ -70,6 +70,14 @@ const projectsData = [
     description: "MERN stack application for managing employees.",
     tags: ["MongoDB", "JavaScript", "CSS", "React", "Express", "Node.js"],
     link: "https://www.youtube.com/watch?v=9igmP44iPto&t=14s"
+  },
+    {
+    id: 9,
+    name: "Poetry Bookshelf",
+    image: require("../assets/images/projects/poetryshelf.png"),
+    description: "",
+    tags: ["JavaScript", "CSS", "React", "Node.js"],
+    link: "https://ckcarr.github.io/poetry-app/"
   }
 ];
 
