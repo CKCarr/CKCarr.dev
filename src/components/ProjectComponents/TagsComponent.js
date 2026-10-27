@@ -10,7 +10,10 @@ export default function TagsComponent({ tags }) {
       {tags.map((tag) => (
         <li
           key={tag}
-          className="max-w-full rounded-md border border-darkcyan bg-midnightblue px-3 py-1 font-outfit text-sm text-plum break-words"
+          className="max-w-full rounded-full border border-v3-line
+           bg-v3-mint px-3 py-1
+           font-outfit text-sm font-medium
+           text-v3-teal break-words"
         >
           {tag}
         </li>

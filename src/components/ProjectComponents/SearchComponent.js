@@ -9,7 +9,7 @@ export default function SearchComponent({
     <div className="w-full">
       <label
         htmlFor="project-search"
-        className="mb-1 ml-2 block font-outfit font-semibold text-midnightblue"
+        className="mb-2 block font-outfit text-sm font-semibold text-v3-text-primary"
       >
         Search Projects
       </label>
@@ -19,12 +19,13 @@ export default function SearchComponent({
         type="search"
         value={searchTerm}
         onChange={(event) => setSearchTerm(event.target.value)}
-        placeholder="Search by project name..."
-        className="w-full rounded-lg border-2 border-darkcyan
-                   bg-white px-4 py-3 text-midnightblue
-                   placeholder-gray-600
-                   focus:outline-none focus:ring-2
-                   focus:ring-darkcyan"
+        placeholder="Search projects..."
+        className="w-full rounded-xl border border-v3-line
+           bg-white px-4 py-3 font-outfit
+           text-v3-text-primary
+           placeholder:text-v3-text-secondary
+           focus:outline-none focus:ring-2
+           focus:ring-v3-teal focus-visible:ring-offset-2"
       />
     </div>
   );

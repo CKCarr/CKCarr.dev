@@ -75,7 +75,7 @@ const projectsData = [
     id: 10,
     name: "Poetry Bookshelf",
     image: require("../assets/images/projects/poetryshelf.png"),
-    description: "",
+    description: "An evolving digital bookshelf project exploring interactive reading and book organization.",
     tags: ["JavaScript", "CSS", "React", "Node.js"],
     link: "https://ckcarr.github.io/poetry-app/"
   }
