@@ -2,10 +2,6 @@
 import React from "react";
 import Card from "../Card.js";
 
-import storyImage from "../../assets/images/story.png";
-import processImage from "../../assets/images/process2.png";
-import goalsImage from "../../assets/images/goals.png";
-
 function AboutSection() {
   return (
     <section

@@ -12,10 +12,10 @@ export default function BlogPage() {
       {/* pt-36 provides space beneath the fixed navbar.
           Adjust this if the navbar height changes. */}
       <header className="mb-10 text-center">
-        <h1 className="font-outfit text-4xl font-bold text-white md:text-5xl">
+        <h1 className="font-outfit text-4xl font-bold text-v3-ink md:text-5xl">
           Blog & Learning Journal
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-white">
+        <p className="mx-auto mt-4 max-w-2xl text-v3-muted">
           Development notes, lessons learned, and reflections
           from my journey in software development.
         </p>

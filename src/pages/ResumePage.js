@@ -25,15 +25,15 @@ export default function ResumePage() {
     <main className="mx-auto w-full max-w-6xl px-4 pb-16 pt-36">
       {/* 1. PROFESSIONAL HEADER */}
       <header className="mb-10 text-center">
-        <h1 className="font-outfit text-4xl font-bold text-white md:text-5xl">
+        <h1 className="font-outfit text-4xl font-bold text-v3-ink md:text-5xl">
           {personal.name}
         </h1>
 
-        <p className="mt-3 text-xl font-semibold text-white">
+        <p className="mt-3 text-xl font-semibold text-v3-ink">
           {personal.headline}
         </p>
 
-        <p className="mx-auto mt-5 max-w-3xl leading-7 text-white">
+        <p className="mx-auto mt-5 max-w-3xl leading-7 text-v3-muted">
           {summary}
         </p>
 
@@ -51,7 +51,7 @@ export default function ResumePage() {
             href={resumePdf}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-md border border-white px-5 py-3 font-semibold text-white transition-colors hover:bg-darkpurple"
+            className="rounded-md bg-darkcyan border border-white px-5 py-3 font-semibold text-white transition-colors hover:bg-darkpurple"
           >
             View PDF
           </a>
@@ -60,7 +60,7 @@ export default function ResumePage() {
             href={personal.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-md border border-white px-5 py-3 font-semibold text-white transition-colors hover:bg-darkpurple"
+            className="rounded-md bg-darkcyan border border-white px-5 py-3 font-semibold text-white transition-colors hover:bg-darkpurple"
           >
             GitHub
           </a>
@@ -69,7 +69,7 @@ export default function ResumePage() {
             href={personal.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-md border border-white px-5 py-3 font-semibold text-white transition-colors hover:bg-darkpurple"
+            className="rounded-md bg-darkcyan border border-white px-5 py-3 font-semibold text-white transition-colors hover:bg-darkpurple"
           >
             LinkedIn
           </a>

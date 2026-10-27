@@ -78,7 +78,16 @@ const projectsData = [
     description: "An evolving digital bookshelf project exploring interactive reading and book organization.",
     tags: ["JavaScript", "CSS", "React", "Node.js"],
     link: "https://ckcarr.github.io/poetry-app/"
-  }
+  },
+  {
+  id: 11,
+  name: "AI Chatbot — React & Gemini",
+  image: require("../assets/images/projects/aichatbot.png"),
+  description:
+    "A guided learning project exploring conversational AI with React, Gemini API integration, and chat session management. Built while studying AI application development and preparing to implement retrieval-augmented generation (RAG).",
+  tags: ["React", "JavaScript", "Express", "Gemini API", "AI"],
+  link: "https://github.com/CKCarr/aI-chat-bot"
+},
 ];
 
 export default projectsData;

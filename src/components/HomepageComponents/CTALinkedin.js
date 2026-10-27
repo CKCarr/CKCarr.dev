@@ -1,6 +1,5 @@
 
 import React from "react";
-import mobileContact from "../../assets/images/mobile-contact.png";
 
 export default function CTALinkedin() {
   return (

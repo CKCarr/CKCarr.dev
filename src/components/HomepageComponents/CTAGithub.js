@@ -1,6 +1,5 @@
 
 import React from "react";
-import appList from "../../assets/images/app-list.png";
 
 export default function CTAGithub() {
   return (
