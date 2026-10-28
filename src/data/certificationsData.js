@@ -28,11 +28,16 @@ const certificationsData = [
     link: "https://coursera.org/share/249996da1ac5473c2df9ff444e0e9ce2"
   },
   {
-    id: 4,
-    title: "Responsive Web Design",
-    platform: "FreeCodeCamp",
-    link: "https://www.freecodecamp.org/certification/CKCarr/responsive-web-design"
-  },
+  id: 4,
+  title: "Legacy Responsive Web Design V8",
+  platform: "freeCodeCamp",
+  type: "Developer Certification",
+  completed: "December 28, 2024",
+  duration: "Approximately 300 hours of work",
+  description:
+    "Completed responsive web design coursework and practical projects covering HTML and CSS.",
+  link: "https://www.freecodecamp.org/certification/ckcarr/responsive-web-design"
+},
   {
     id: 5,
     title: "Create a Project Management Tracker using Microsoft Excel",
@@ -52,11 +57,16 @@ const certificationsData = [
     link: "https://coursera.org/share/75db19518bfdcd0514715728b03be947"
   },
   {
-    id: 8,
-    title: "Copywriting with ChatGPT: Produce Compelling Copy That Sells",
-    platform: "Coursera",
-    link: "https://coursera.org/share/41ee3a039fadc183566f565ca27da8a3"
-  },
+  id: 8,
+  title: "Copywriting with ChatGPT: Produce Compelling Copy That Sells",
+  platform: "Coursera",
+  type: "Project Certificate",
+  completed: "September 25, 2024",
+  duration: "Approximately 2 hours",
+  description:
+    "Completed a guided project exploring AI-assisted copywriting.",
+  link: "https://coursera.org/share/41ee3a039fadc183566f565ca27da8a3"
+},
   // {
   //   id: 9,
   //   title:"Systems Thinking Basics",
